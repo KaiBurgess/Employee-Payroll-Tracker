@@ -21,7 +21,7 @@ const collectEmployees = function() {
   addEmployees = confirm("Do you want to add employees?")
   }
   // if yes ask again 
-
+console.log(employees)
   // if no return 
 
   return employees;
@@ -39,11 +39,14 @@ const displayAverageSalary = function(employeesArray) {
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
-  const randomEmployee = [];
+   
+ let randomindex = Math.floor(Math.random() * employeesArray.length);
+ console.log(employeesArray[randomindex].firstname, employeesArray[randomindex].lastname)
+}
   
   
   // TODO: Select and display a random employee
-}
+
 
 /*
   ====================
@@ -66,11 +69,11 @@ const displayEmployees = function(employeesArray) {
     const newTableRow = document.createElement("tr");
 
     const firstNameCell = document.createElement("td");
-    firstNameCell.textContent = currentEmployee.firstName;
+    firstNameCell.textContent = currentEmployee.firstname;
     newTableRow.append(firstNameCell);
 
     const lastNameCell = document.createElement("td");
-    lastNameCell.textContent = currentEmployee.lastName;
+    lastNameCell.textContent = currentEmployee.lastname;
     newTableRow.append(lastNameCell);
 
     const salaryCell = document.createElement("td");
